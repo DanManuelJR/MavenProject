@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>App.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">demo</a> &gt; <a href="index.source.html" class="el_package">com.example</a> &gt; <span class="el_source">App.java</span></div><h1>App.java</h1><pre class="source lang-java linenums">package com.example;
+
+import com.personpackage.*;
+import com.vehiclepackage.*;
+
+public final class App {
+    private App() {
+    }
+
+    public static void main(String[] args) {
+
+<span class="nc" id="L12">        student juan = new student(&quot;Juan&quot;, &quot;Dos&quot;, 13, &quot;First year&quot;);</span>
+<span class="nc" id="L13">        teacher pedro = new teacher(&quot;Pedro&quot;, &quot;Domas&quot;, 26, &quot;Masters degree&quot;);</span>
+
+<span class="nc" id="L15">        introduction(juan.getName(), juan.getLastName(), juan.getAge(), &quot;student&quot;, juan.getYear(), &quot;First Year&quot;);</span>
+<span class="nc" id="L16">        introduction(pedro.getName(), pedro.getLastName(), pedro.getAge(), &quot;teacher&quot;, pedro.getDegreeLevel(), &quot;Masters Degree&quot;);</span>
+
+<span class="nc" id="L18">        car Lamborghini = new car(4, &quot;5.2-litre naturally aspirated Audi/Lamborghini V10 &quot;, 4);</span>
+<span class="nc" id="L19">        bike crf450r = new bike(2, &quot;Single cylinder, four-stroke motor&quot;, 73);</span>
+
+<span class="nc" id="L21">        displaySpecs(&quot;Lamborghini Huracan&quot;, Lamborghini.getNumOfWheels(), Lamborghini.getEngine(), &quot;Storage capacity&quot;, Lamborghini.getStorageCapacity());</span>
+<span class="nc" id="L22">        displaySpecs(&quot;crf450r&quot;, crf450r.getNumOfWheels(), crf450r.getEngine(), &quot;Wheelie power&quot;, crf450r.getWheeliePower());</span>
+
+<span class="nc" id="L24">    }</span>
+
+    public static void introduction(String name, String lastName, int age, String string,String title, String customString) {
+<span class="nc" id="L27">        String introduction = &quot;Hi! I am &quot; + name + &quot; &quot; + lastName + &quot; I am &quot; + age + &quot; years old &quot; + title;</span>
+<span class="nc" id="L28">        String customIntroduction = &quot;&quot;;</span>
+<span class="nc bnc" id="L29" title="All 3 branches missed.">        switch(title.toLowerCase()){</span>
+            case &quot;student&quot;:
+<span class="nc" id="L31">                customIntroduction = &quot;and I am a &quot; + customString.toLowerCase() + &quot; &quot; + title + &quot;.&quot;;</span>
+<span class="nc" id="L32">                break;</span>
+            case &quot;teacher&quot;:
+<span class="nc" id="L34">                customIntroduction = &quot;and I am a &quot; + customString.toLowerCase() + &quot; having a &quot; + title + &quot;.&quot;;</span>
+            //     break;
+            // default:
+            //     System.out.println(&quot;You entered an invalid title.&quot;);
+        }
+<span class="nc" id="L39">        System.out.println(introduction + &quot; &quot; + customIntroduction);    </span>
+<span class="nc" id="L40">        }</span>
+        public static void displaySpecs(String vehicle, int numberOfWheels, String engine, String customKey, int customValue) {
+<span class="nc" id="L42">            System.out.println(&quot;-----------------------------------------&quot;);</span>
+<span class="nc" id="L43">            System.out.println(&quot;The all new &quot; + vehicle + &quot; specs...&quot;);</span>
+<span class="nc" id="L44">            System.out.println(&quot;Number of wheels: &quot; + numberOfWheels);</span>
+<span class="nc" id="L45">            System.out.println(&quot;Engine: &quot; + engine);</span>
+<span class="nc" id="L46">            System.out.println(customKey + &quot;: &quot; + customValue);</span>
+<span class="nc" id="L47">            System.out.println(&quot;------------------------------------------&quot;);</span>
+<span class="nc" id="L48">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>
