@@ -12,8 +12,8 @@ public final class App {
         student juan = new student("Juan", "Dos", 13, "First year");
         teacher pedro = new teacher("Pedro", "Domas", 26, "Masters degree");
 
-        introduction(juan.getName(), juan.getLastName(), juan.getAge(), juan.getYear(), "First Year");
-        introduction(pedro.getName(), pedro.getLastName(), pedro.getAge(), pedro.getDegreeLevel(), "Masters Degree");
+        introduction(juan.getName(), juan.getLastName(), juan.getAge(), juan.getYear(), "Student");
+        introduction(pedro.getName(), pedro.getLastName(), pedro.getAge(), pedro.getDegreeLevel(), "Teacher");
 
         car Lamborghini = new car(4, "5.2-litre naturally aspirated Audi/Lamborghini V10 ", 4);
         bike crf450r = new bike(2, "Single cylinder, four-stroke motor",73);
